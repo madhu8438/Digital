@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>coffee Store</title>
+   <link rel="stylesheet" type="text/css" href="coffee.css">
+</head>
+
+<body>
+   <center><h2>coffee shop</h2></center>
+   <div class="container">
+      <div class="coffee-types">
+         <div class="coffee-card">
+            <center><h3>Cold Coffee</h3></center>
+            <center><img src="img1.jpg" width=90 height=90></center>
+            <center><button onclick="displaycoffeeDetails('Cold Coffee')">Add to Cart</button></center>
+         </div>
+         <div class="coffee-card">
+            <h3>latte</h3>
+            <center><img src="img2.jpeg" width=90 height=90></center>
+            <center><button onclick="displaycoffeeDetails('latte')">Add to Cart</button></center>
+         </div>
+         <div class="coffee-card">
+            <h3>black tea</h3>
+            <center><img src="img3.jpeg" width=90 height=90></center>
+            <center><button onclick="displaycoffeeDetails('black tea')">Add to Cart</button></center>
+         </div>
+      </div>
+   </div>
+   
+   <div id="coffeeDetailsContainer" class="coffee-details-container" style="display: none;">
+      <h3 id="coffeeType"></h3>
+      <p>Rate with cold: $10</p>
+      <p>Rate with hot: $8</p>
+      <button onclick="displayPurchase()">Purchase</button>
+   </div>
+   
+   <div id="purchaseContainer" class="purchase-container" style="display: none;">
+      <h3>Purchase</h3>
+      <p>Customer Name: <input type="text" id="customerName"></p>
+      <p>Type of coffee: <span id="coffeeTypePurchase"></span></p>
+      <p>With Ice: <input type="checkbox" id="withIce"></p>
+      <button onclick="displayPayment()">Make Payment</button>
+   </div>
+
+   <div id="paymentContainer" class="payment-container" style="display: none;">
+      <h3>Payment</h3>
+      <p>Coffee Type: <span id="coffeeTypePayment"></span></p>
+      <p>Customer: <span id="customerDetails"></span></p>
+      <p>Price: <span id="price"></span></p>
+      <h4>Enter Card Details:</h4>
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="CVV">
+      <button onclick="returnHome()">Pay</button>
+   </div>
+
+   <div id="homeContainer" class="home-container" style="display: none;">
+      <p><h2>Thank you for your purchase! Enjoy your coffee!<h2></p> 
+   </div>
+
+   <script src="coffee.js"></script>
+</body>
+
+</html>
